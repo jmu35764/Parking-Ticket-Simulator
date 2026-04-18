@@ -2,6 +2,7 @@
 #define PARKEDCAR_H
 
 #include <string>
+#include <iostream>
 using namespace std;
 
 class ParkedCar
@@ -30,7 +31,11 @@ public:
 
 	void Print()
 	{
-
+		cout << "Make: " << make << endl;
+		cout << "Model: " << model << endl;
+		cout << "Color: " << color << endl;
+		cout << "License Number: " << license_number << endl;
+		cout << "Minutes Parked: " << minutes_parked << endl;
 	}
 
 };
