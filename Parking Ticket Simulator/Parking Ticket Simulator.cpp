@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include <string>
+#include "Parked_Car.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //std::cout << "Hello World!\n";
+    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 25);
+
+    Car1.Print();
+
+    ParkedCar Car2;
+
+    Car2.Print();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
