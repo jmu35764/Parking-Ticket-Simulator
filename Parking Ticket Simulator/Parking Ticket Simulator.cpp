@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Parked_Car.h"
+#include "ParkingMeter.h"
 
 using namespace std;
 
@@ -17,6 +18,14 @@ int main()
     ParkedCar Car2;
 
     Car2.Print();
+
+    ParkingMeter m1(25);
+
+    m1.Print();
+
+    ParkingMeter m2;
+
+    m2.Print();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
