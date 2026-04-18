@@ -14,9 +14,9 @@ private:
 	int minutes_parked;
 
 public:
-	ParkedCar(string mk, string mdl, string clr, string ln, int m_p)
+	ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", int m_pk = 0)
 	{
-		SetCarInfo(" ", " ", " ", " ", 0);
+		SetCarInfo(mk, mdl, clr, ln, m_pk);
 	}
 
 	void SetCarInfo(string mk, string mdl, string clr, string ln, int m_pk)
@@ -26,6 +26,11 @@ public:
 		color = clr;
 		license_number = ln;
 		minutes_parked = m_pk;
+	}
+
+	void Print()
+	{
+
 	}
 
 };
