@@ -27,6 +27,7 @@ public:
 		license_number = ln;
 		minutes_parked = m_pk;
 	}
+
 };
 
 
