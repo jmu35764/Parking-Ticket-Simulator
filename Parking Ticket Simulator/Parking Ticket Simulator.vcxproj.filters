@@ -23,5 +23,8 @@
     <ClInclude Include="Parked_Car.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ParkingMeter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
