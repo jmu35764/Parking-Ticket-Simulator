@@ -14,6 +14,9 @@ class Ticket
 private:
 	int fine;
 	int time_diff;
+	ParkedCar parkedcar;
+	ParkingMeter parkingmeter;
+	Officer officer;
 
 public:
 	Ticket(int f = 0)
@@ -24,6 +27,13 @@ public:
 	int SetFine(ParkedCar pc, ParkingMeter pm)
 	{
 		return pc.Get_MinParked() - pm.Get_MinPurch();
+	}
+
+	void Print()
+	{
+		parkedcar.Print();
+		parkingmeter.Print();
+		officer.Print();
 	}
 
 };
