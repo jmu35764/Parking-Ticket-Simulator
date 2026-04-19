@@ -21,6 +21,11 @@ public:
 		minutes_purchased = min_pch;
 	}
 
+	int Get_MinPurch()
+	{
+		return minutes_purchased;
+	}
+
 	void Print()
 	{
 		cout << "Minutes Purchased: " << minutes_purchased << endl;

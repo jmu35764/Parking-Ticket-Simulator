@@ -29,6 +29,11 @@ public:
 		minutes_parked = m_pk;
 	}
 
+	int Get_MinParked() const
+	{
+		return minutes_parked;
+	}
+
 	void Print()
 	{
 		cout << "Make: " << make << endl;

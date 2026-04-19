@@ -5,13 +5,14 @@
 #include <string>
 #include "Parked_Car.h"
 #include "ParkingMeter.h"
+#include "Ticket.h"
 
 using namespace std;
 
 int main()
 {
     //std::cout << "Hello World!\n";
-    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 25);
+    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 30);
 
     Car1.Print();
 
@@ -23,9 +24,14 @@ int main()
 
     m1.Print();
 
-    ParkingMeter m2;
+    //ParkingMeter m2;
 
-    m2.Print();
+    //m2.Print();
+
+    Ticket t1;
+
+    //cout << "Set fine code" << endl;
+    cout << t1.SetFine(Car1, m1) << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
