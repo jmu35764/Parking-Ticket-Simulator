@@ -16,12 +16,8 @@ private:
 	string Off_Badge;
 	ParkedCar parkedcar;
 	ParkingMeter parkingmeter;
-	Ticket ticket;
+	//Ticket ticket;
 
-	bool violation()
-	{
-
-	}
 	
 	bool violation(ParkedCar pc, ParkingMeter pm) const
 	{
@@ -36,13 +32,15 @@ private:
 		}
 	}
 
-	Ticket MakeTicket(ParkedCar pc, ParkingMeter pm)
+	/*Ticket MakeTicket(ParkedCar pc, ParkingMeter pm)
 	{
-		if (violation(pc,pm) == true)
+		if (violation(pc, pm) == true)
 		{
 			ticket
 		}
-	}
+
+		else return 0;
+	}*/
 
 public:
 

@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Parking Ticket Simulator/Parking Ticket Simulator.vcxproj" />
+  <Project Path="Parking Ticket Simulator/Parking Ticket Simulator.vcxproj" Id="6b6fc397-7107-48e5-a1a0-0292af5ae76a" />
 </Solution>

@@ -26,13 +26,30 @@ public:
 
 	int SetFine(ParkedCar pc, ParkingMeter pm)
 	{
-		return pc.Get_MinParked() - pm.Get_MinPurch();
+		if ((pm.Get_MinPurch() - pc.Get_MinParked()) %60 == 0)
+		{
+			fine = 25 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
+		}
+		
+		else
+		{
+			fine = 35 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
+		}
+
+
+		//fine = 10 / 3;
+
+		return fine;
 	}
 
 	void Print()
 	{
+		cout << "Car information: " << endl;
 		parkedcar.Print();
+		cout << endl;
 		parkingmeter.Print();
+		cout << "Fine: " << fine << endl;
+		cout << "Officer Informaiton" << endl;
 		officer.Print();
 	}
 

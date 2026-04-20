@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     //std::cout << "Hello World!\n";
-    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 30);
+    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 25);
 
     Car1.Print();
 
@@ -20,7 +20,7 @@ int main()
 
     Car2.Print();
 
-    ParkingMeter m1(25);
+    ParkingMeter m1(150);
 
     m1.Print();
 
@@ -32,6 +32,8 @@ int main()
 
     //cout << "Set fine code" << endl;
     cout << t1.SetFine(Car1, m1) << endl;
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
