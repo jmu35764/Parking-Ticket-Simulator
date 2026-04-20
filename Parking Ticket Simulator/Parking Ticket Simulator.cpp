@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     //std::cout << "Hello World!\n";
-    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 25);
+    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 29);
 
     Car1.Print();
 

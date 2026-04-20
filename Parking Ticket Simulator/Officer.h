@@ -16,7 +16,7 @@ private:
 	string Off_Badge;
 	ParkedCar parkedcar;
 	ParkingMeter parkingmeter;
-	//Ticket ticket;
+	Ticket ticket;
 
 	
 	bool violation(ParkedCar pc, ParkingMeter pm) const
@@ -32,22 +32,26 @@ private:
 		}
 	}
 
-	/*Ticket MakeTicket(ParkedCar pc, ParkingMeter pm)
+	void MakeTicket(ParkedCar pc, ParkingMeter pm, Ticket t)
 	{
 		if (violation(pc, pm) == true)
 		{
-			ticket
+			ticket = t.SetFine(pc, pm);
 		}
 
 		else return 0;
-	}*/
+	}
 
 public:
 
-	Officer(string OffN = " ", string OffB = " ")
+	Officer(string OffN = " ", string OffB = " ", string make, string model, string color,
+		string licensenum, int min_parked, int min_purch)
 	{
 		Off_Name = OffN;
 		Off_Badge = OffB;
+		parkedcar.SetCarInfo(make, model, color, licensenum, min_parked);
+		parkingmeter.SetMeter(min_purch);
+
 	}
 
 	void SetOff(string OffN, string OffB)

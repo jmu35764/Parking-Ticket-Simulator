@@ -49,7 +49,7 @@ public:
 		cout << endl;
 		parkingmeter.Print();
 		cout << "Fine: " << fine << endl;
-		cout << "Officer Informaiton" << endl;
+		cout << "Officer Informaiton: " << endl;
 		officer.Print();
 	}
 
