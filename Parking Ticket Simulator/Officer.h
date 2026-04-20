@@ -19,9 +19,9 @@ private:
 	Ticket ticket;
 
 	
-	bool violation(ParkedCar pc, ParkingMeter pm) const
+	bool violation() const
 	{
-		if (pc.Get_MinParked() > pm.Get_MinPurch())
+		if (parkedcar.Get_MinParked() > parkingmeter.Get_MinPurch())
 		{
 			return true;
 		}
@@ -32,19 +32,19 @@ private:
 		}
 	}
 
-	void MakeTicket(ParkedCar pc, ParkingMeter pm, Ticket t)
+	void MakeTicket()
 	{
-		if (violation(pc, pm) == true)
+		if (violation() == true)
 		{
-			ticket = t.SetFine(pc, pm);
+			ticket.();
 		}
 
-		else return 0;
+		//else return 0;
 	}
 
 public:
 
-	Officer(string OffN = " ", string OffB = " ", string make, string model, string color,
+	Officer(string OffN, string OffB, string make, string model, string color,
 		string licensenum, int min_parked, int min_purch)
 	{
 		Off_Name = OffN;

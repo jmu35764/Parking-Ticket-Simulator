@@ -19,21 +19,21 @@ private:
 	Officer officer;
 
 public:
-	Ticket(int f = 0)
+	Ticket(int f = 0, string model, )
 	{
 		fine = f;
 	}
 
-	int SetFine(ParkedCar pc, ParkingMeter pm)
+	int SetFine()
 	{
-		if ((pm.Get_MinPurch() - pc.Get_MinParked()) %60 == 0)
+		if ((parkingmeter.Get_MinPurch() - parkedcar.Get_MinParked()) %60 == 0)
 		{
-			fine = 25 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
+			fine = 25 + ((parkingmeter.Get_MinPurch() - parkedcar.Get_MinParked()) - 60) / 6;
 		}
 		
 		else
 		{
-			fine = 35 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
+			fine = 35 + ((parkingmeter.Get_MinPurch() - parkedcar.Get_MinParked()) - 60) / 6;
 		}
 
 

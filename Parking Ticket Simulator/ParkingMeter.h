@@ -21,7 +21,7 @@ public:
 		minutes_purchased = min_pch;
 	}
 
-	int Get_MinPurch()
+	int Get_MinPurch() const
 	{
 		return minutes_purchased;
 	}
