@@ -31,7 +31,11 @@ int main()
     Ticket t1;
 
     //cout << "Set fine code" << endl;
-    cout << t1.SetFine(Car1, m1) << endl;
+    //cout << t1.SetFine(Car1, m1) << endl;
+
+    cout << "OFFICER OBJECT TEST" << endl;
+
+    Officer P1("Jones", "1234", "Ford", "Focus", "Black", "ABC123", 30, 25);
 
 
 }

@@ -15,6 +15,9 @@ private:
 	int minutes_parked;
 
 public:
+	
+	friend class Ticket;
+
 	ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", int m_pk = 0)
 	{
 		SetCarInfo(mk, mdl, clr, ln, m_pk);

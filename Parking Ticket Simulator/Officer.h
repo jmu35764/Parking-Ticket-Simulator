@@ -19,7 +19,7 @@ private:
 	Ticket ticket;
 
 	
-	bool violation() const
+	/*bool violation() const
 	{
 		if (parkedcar.Get_MinParked() > parkingmeter.Get_MinPurch())
 		{
@@ -28,18 +28,24 @@ private:
 
 		else
 		{
+			cout << "There is no parking violation" << endl;
 			return false;
 		}
-	}
+	}*/
 
 	void MakeTicket()
 	{
-		if (violation() == true)
+		if (parkedcar.Get_MinParked() > parkingmeter.Get_MinPurch())
 		{
-			ticket.();
+			ticket.SetFine(parkingmeter, parkedcar);
+			ticket.Print(parkedcar, parkingmeter, Off_Name, Off_Badge);
 		}
 
-		//else return 0;
+		else
+		{
+			cout << "There is no violation " << endl;
+		}
+		
 	}
 
 public:

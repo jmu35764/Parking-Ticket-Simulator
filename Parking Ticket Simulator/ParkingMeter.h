@@ -11,6 +11,9 @@ private:
 	int minutes_purchased;
 
 public:
+
+	friend class Ticket;
+	
 	ParkingMeter(int min_pch = 0)
 	{
 		minutes_purchased = min_pch;

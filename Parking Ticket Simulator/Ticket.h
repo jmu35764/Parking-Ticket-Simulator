@@ -14,43 +14,42 @@ class Ticket
 private:
 	int fine;
 	int time_diff;
-	ParkedCar parkedcar;
-	ParkingMeter parkingmeter;
-	Officer officer;
 
 public:
-	Ticket(int f = 0, string model, )
+	Ticket(int f = 0)
 	{
 		fine = f;
 	}
 
-	int SetFine()
+	void SetFine(ParkingMeter pm, ParkedCar pc)
 	{
-		if ((parkingmeter.Get_MinPurch() - parkedcar.Get_MinParked()) %60 == 0)
+		if ((pm.Get_MinPurch() - pc.Get_MinParked()) %60 == 0)
 		{
-			fine = 25 + ((parkingmeter.Get_MinPurch() - parkedcar.Get_MinParked()) - 60) / 6;
+			fine = 25 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
 		}
 		
 		else
 		{
-			fine = 35 + ((parkingmeter.Get_MinPurch() - parkedcar.Get_MinParked()) - 60) / 6;
+			fine = 35 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
 		}
-
-
-		//fine = 10 / 3;
-
-		return fine;
 	}
 
-	void Print()
+	void Print(ParkedCar pc, ParkingMeter pm, string offName, string offNum)
 	{
-		cout << "Car information: " << endl;
+		pc.Print();
+		pm.Print();
+		cout << "Parking Fine: " << fine << endl;
+		cout << "Officer Name: " << offName << endl;
+		cout << "Officer Number: " << offNum << endl;
+
+		
+		/*cout << "Car information: " << endl;
 		parkedcar.Print();
 		cout << endl;
 		parkingmeter.Print();
 		cout << "Fine: " << fine << endl;
 		cout << "Officer Informaiton: " << endl;
-		officer.Print();
+		officer.Print();*/
 	}
 
 };
