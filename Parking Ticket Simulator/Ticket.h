@@ -12,16 +12,18 @@ using namespace std;
 class Ticket
 {
 private:
-	int fine;
-	int time_diff;
+	double fine;
+	ParkedCar& pc;
+	ParkingMeter& pm;
+	//int time_diff;
 
 public:
-	Ticket(int f = 0)
+	Ticket(ParkingMeter& pmref, ParkedCar& pcref): pc(pcref), pm(pmref)
 	{
-		fine = f;
+		fine = SetFine(pmref,pcref);
 	}
 
-	void SetFine(ParkingMeter pm, ParkedCar pc)
+	double SetFine(ParkingMeter pm, ParkedCar pc)
 	{
 		if ((pm.Get_MinPurch() - pc.Get_MinParked()) %60 == 0)
 		{

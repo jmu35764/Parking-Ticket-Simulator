@@ -16,26 +16,18 @@ int main()
 
     Car1.Print();
 
-    ParkedCar Car2;
-
-    Car2.Print();
-
     ParkingMeter m1(150);
 
-    m1.Print();
-
-    //ParkingMeter m2;
-
-    //m2.Print();
-
-    Ticket t1;
+ 
 
     //cout << "Set fine code" << endl;
     //cout << t1.SetFine(Car1, m1) << endl;
 
     cout << "OFFICER OBJECT TEST" << endl;
 
-    Officer P1("Jones", "1234", "Ford", "Focus", "Black", "ABC123", 30, 25);
+    Officer P1("Jones", "1234", Car1, m1);
+    P1.Inspect();
+
 
 
 }
