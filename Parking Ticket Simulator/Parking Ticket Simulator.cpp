@@ -6,24 +6,22 @@
 #include "Parked_Car.h"
 #include "ParkingMeter.h"
 #include "Ticket.h"
+#include "Officer.h"
 
 using namespace std;
 
 int main()
 {
-    //std::cout << "Hello World!\n";
-    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 29);
+    //****** SCENARIO 1: LEGAL PARKING ******//
 
+    cout << "LEGAL PARKING" << endl;
+    
+    ParkedCar Car1("Ford", "Fusion", "Black", "123ACD", 50);
     Car1.Print();
 
-    ParkingMeter m1(150);
+    ParkingMeter m1(60);
 
- 
-
-    //cout << "Set fine code" << endl;
-    //cout << t1.SetFine(Car1, m1) << endl;
-
-    cout << "OFFICER OBJECT TEST" << endl;
+     //cout << "OFFICER OBJECT TEST" << endl;
 
     Officer P1("Jones", "1234", Car1, m1);
     P1.Inspect();

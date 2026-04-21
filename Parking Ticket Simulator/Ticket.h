@@ -3,11 +3,13 @@
 
 #include <string>
 #include <iostream>
+#include <cmath>
 #include "Parked_Car.h"
 #include "ParkingMeter.h"
-#include "Officer.h"
+//#include "Officer.h"
 
 using namespace std;
+//class Officer;
 
 class Ticket
 {
@@ -27,13 +29,14 @@ public:
 	{
 		if ((pm.Get_MinPurch() - pc.Get_MinParked()) %60 == 0)
 		{
-			fine = 25 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
+			fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60) * 10;
 		}
 		
 		else
 		{
-			fine = 35 + ((pm.Get_MinPurch() - pc.Get_MinParked()) - 60) / 6;
+			fine = 35 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60)*10;
 		}
+		return fine;
 	}
 
 	void Print(ParkedCar pc, ParkingMeter pm, string offName, string offNum)

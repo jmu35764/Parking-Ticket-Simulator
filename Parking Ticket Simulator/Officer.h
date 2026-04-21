@@ -8,6 +8,7 @@
 #include "Ticket.h"
 
 using namespace std;
+class Ticket;
 
 class Officer
 {
@@ -16,7 +17,7 @@ private:
 	string Off_Badge;
 	ParkedCar& parkedcar;
 	ParkingMeter& parkingmeter;
-	//Ticket ticket;
+	//Ticket ticket(parkingmeter, parkedcar);
 
 	
 	/*bool violation() const
@@ -40,16 +41,18 @@ public:
 	Officer(string OffN, string OffB, ParkedCar& pcref, ParkingMeter& pmref) :parkedcar(pcref)
 		, parkingmeter(pmref), Off_Name(OffN), Off_Badge(OffB) 
 	{
-		
+		;
 	}
 
 	void Inspect()
 	{
 		if (parkedcar.Get_MinParked() > parkingmeter.Get_MinPurch())
 		{
-			Ticket ticket(parkingmeter, parkedcar);
+			Ticket* ticket = new Ticket(parkingmeter, parkedcar);
+			//Ticket ticket(parkingmeter, parkedcar);
 			//ticket.SetFine(parkingmeter, parkedcar);
-			ticket.Print(parkedcar, parkingmeter, Off_Name, Off_Badge);
+			ticket->Print(parkedcar, parkingmeter, Off_Name, Off_Badge);
+			delete ticket;
 
 		}
 
