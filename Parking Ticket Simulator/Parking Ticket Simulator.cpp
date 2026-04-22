@@ -40,13 +40,13 @@ int main()
 
     cout << endl << "ILLEGAL PARKING: OVER 1 HOUR" << endl;
 
-    ParkedCar Illeg2("Honda", "Civic", "Red", "789GHI", 180);
+    ParkedCar Illeg2("Honda", "Civic", "Red", "789GHI", 181);
     ParkingMeter m3(60);
 
     Officer P3("Max Payne", "2244", Illeg2, m3);
     P3.Inspect();
 
-    cout << ceil(1.3) << endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

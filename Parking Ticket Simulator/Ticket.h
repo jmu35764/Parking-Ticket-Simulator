@@ -15,6 +15,7 @@ class Ticket
 {
 private:
 	double fine;
+	const double val = 1 / 60;
 	ParkedCar& pc;
 	ParkingMeter& pm;
 	//int time_diff;
@@ -27,16 +28,17 @@ public:
 
 	double SetFine(ParkingMeter pm, ParkedCar pc)
 	{
-		if ((pm.Get_MinPurch() - pc.Get_MinParked()) % 60 == 0)
+		/*if ((pm.Get_MinPurch() - pc.Get_MinParked()) % 60 == 0)
 		{
-			fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60) * 10;
+			fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60)  60) * 10;
 		}
 		
 		else
 		{
 			fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60) * 10;
-		}
-		fine = 25 + ceil((((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60)+1) * 10;
+		}*/
+
+		fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60)* 0.0166) * 10;
 
 		return fine;
 	}
