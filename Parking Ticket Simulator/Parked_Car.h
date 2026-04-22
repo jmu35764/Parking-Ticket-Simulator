@@ -12,18 +12,18 @@ private:
 	string model;
 	string color;
 	string license_number;
-	int minutes_parked;
+	double minutes_parked;
 
 public:
 	
 	friend class Ticket;
 
-	ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", int m_pk = 0)
+	ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", double m_pk = 0)
 	{
 		SetCarInfo(mk, mdl, clr, ln, m_pk);
 	}
 
-	void SetCarInfo(string mk, string mdl, string clr, string ln, int m_pk)
+	void SetCarInfo(string mk, string mdl, string clr, string ln, double m_pk)
 	{
 		make = mk;
 		model = mdl;

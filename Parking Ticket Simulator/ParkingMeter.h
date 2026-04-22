@@ -8,18 +8,18 @@ using namespace std;
 class ParkingMeter
 {
 private:
-	int minutes_purchased;
+	double minutes_purchased;
 
 public:
 
 	friend class Ticket;
 	
-	ParkingMeter(int min_pch = 0)
+	ParkingMeter(double min_pch = 0)
 	{
 		minutes_purchased = min_pch;
 	}
 
-	void SetMeter(int min_pch)
+	void SetMeter(double min_pch)
 	{
 		minutes_purchased = min_pch;
 	}

@@ -27,7 +27,7 @@ public:
 
 	double SetFine(ParkingMeter pm, ParkedCar pc)
 	{
-		/*if ((pm.Get_MinPurch() - pc.Get_MinParked()) % 60 == 0)
+		if ((pm.Get_MinPurch() - pc.Get_MinParked()) % 60 == 0)
 		{
 			fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60) * 10;
 		}
@@ -35,8 +35,8 @@ public:
 		else
 		{
 			fine = 35 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60)*10;
-		}*/
-		fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60) * 10;
+		}
+		//fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60) * 10;
 
 		return fine;
 	}
