@@ -47,7 +47,45 @@ int main()
     P3.Inspect();
 
 
-}
+    //****** SCENARIO 4: MULTIPLE CARS ******//
+
+    //ParkedCar Car2("Kia", "Rio", "Silver", "111AAA", 30);
+
+    cout << endl << "MULTIPLE CARS TEST" << endl;
+
+    ParkedCar Car_[4]; 
+    Car_[0] = ParkedCar("Kia", "Rio", "Silver", "111AAA", 30);
+    Car_[1] = ParkedCar("Ford", "Focus", "Blue", "222BBB", 60); 
+    Car_[2] = ParkedCar("Hyundai", "Elantra", "Green", "333CCC", 130); 
+    Car_[3] = ParkedCar("Toyota", "Camry", "Yellow", "444DDD", 245);
+
+    ParkingMeter Meter[4];
+    Meter[0] = ParkingMeter(60);
+    Meter[1] = ParkingMeter(60);
+    Meter[2] = ParkingMeter(60);
+    Meter[3] = ParkingMeter(60);
+
+    Officer Mult1("Adrian", "9876", Car_[0], Meter[0]);
+    Mult1.Inspect();
+    cout << endl;
+
+    Officer Mult2("Adrian", "9876", Car_[1], Meter[1]);
+    Mult2.Inspect();
+    cout << endl;
+
+    Officer Mult3("Adrian", "9876", Car_[2], Meter[2]);
+    Mult3.Inspect();
+    cout << endl;
+
+    Officer Mult4("Adrian", "9876", Car_[3], Meter[3]);
+    Mult4.Inspect();
+
+}   
+
+
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
