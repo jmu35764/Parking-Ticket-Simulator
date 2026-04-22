@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "Parked_Car.h"
 #include "ParkingMeter.h"
 #include "Ticket.h"
@@ -39,7 +40,7 @@ int main()
 
     cout << endl << "ILLEGAL PARKING: OVER 1 HOUR" << endl;
 
-    ParkedCar Illeg2("Honda", "Civic", "Red", "789GHI", 190);
+    ParkedCar Illeg2("Honda", "Civic", "Red", "789GHI", 180);
     ParkingMeter m3(60);
 
     Officer P3("Max Payne", "2244", Illeg2, m3);
