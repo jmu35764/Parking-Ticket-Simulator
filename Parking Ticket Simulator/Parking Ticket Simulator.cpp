@@ -45,6 +45,8 @@ int main()
 
     Officer P3("Max Payne", "2244", Illeg2, m3);
     P3.Inspect();
+
+    cout << ceil(1.3) << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
