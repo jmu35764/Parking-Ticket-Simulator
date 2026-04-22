@@ -17,25 +17,6 @@ private:
 	string Off_Badge;
 	ParkedCar& parkedcar;
 	ParkingMeter& parkingmeter;
-	//Ticket ticket(parkingmeter, parkedcar);
-
-	
-	/*bool violation() const
-	{
-		if (parkedcar.Get_MinParked() > parkingmeter.Get_MinPurch())
-		{
-			return true;
-		}
-
-		else
-		{
-			cout << "There is no parking violation" << endl;
-			return false;
-		}
-	}*/
-
-
-
 public:
 
 	Officer(string OffN, string OffB, ParkedCar& pcref, ParkingMeter& pmref) :parkedcar(pcref)
@@ -49,8 +30,6 @@ public:
 		if (parkedcar.Get_MinParked() > parkingmeter.Get_MinPurch())
 		{
 			Ticket* ticket = new Ticket(parkingmeter, parkedcar);
-			//Ticket ticket(parkingmeter, parkedcar);
-			//ticket.SetFine(parkingmeter, parkedcar);
 			ticket->Print(parkedcar, parkingmeter, Off_Name, Off_Badge);
 			delete ticket;
 
@@ -62,12 +41,6 @@ public:
 		}
 
 	}
-	
-	/*void SetOff(string OffN, string OffB)
-	{
-		Off_Name = OffN;
-		Off_Badge = OffB;
-	}*/
 
 	void Print()
 	{

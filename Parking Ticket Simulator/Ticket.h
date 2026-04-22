@@ -28,16 +28,6 @@ public:
 
 	double SetFine(ParkingMeter pm, ParkedCar pc)
 	{
-		/*if ((pm.Get_MinPurch() - pc.Get_MinParked()) % 60 == 0)
-		{
-			fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60)  60) * 10;
-		}
-		
-		else
-		{
-			fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60) / 60) * 10;
-		}*/
-
 		fine = 25 + ceil(((pc.Get_MinParked() - pm.Get_MinPurch()) - 60)* 0.0166) * 10;
 
 		return fine;
@@ -51,14 +41,6 @@ public:
 		cout << "Officer Name: " << offName << endl;
 		cout << "Officer Number: " << offNum << endl;
 
-		
-		/*cout << "Car information: " << endl;
-		parkedcar.Print();
-		cout << endl;
-		parkingmeter.Print();
-		cout << "Fine: " << fine << endl;
-		cout << "Officer Informaiton: " << endl;
-		officer.Print();*/
 	}
 
 };
