@@ -21,13 +21,29 @@ int main()
 
     ParkingMeter m1(60);
 
-     //cout << "OFFICER OBJECT TEST" << endl;
-
     Officer P1("Jones", "1234", Car1, m1);
     P1.Inspect();
 
+    //****** SCENARIO 2: ILLEGAL PARKING: UNDER 1 HOUR ******//
+
+    cout << endl << "ILLEGAL PARKING: UNDER 1 HOUR" << endl;
+
+    ParkedCar Illeg("Mercury", "Sabel", "White", "456DEF", 70);
+    ParkingMeter m2(60);
+    
+    Officer P2("Max Payne", "2244", Illeg, m2);
+    P2.Inspect();
 
 
+    //****** SCENARIO 3: ILLEGAL PARKING: OVER 1 HOUR ******//
+
+    cout << endl << "ILLEGAL PARKING: OVER 1 HOUR" << endl;
+
+    ParkedCar Illeg2("Honda", "Civic", "Red", "789GHI", 190);
+    ParkingMeter m3(60);
+
+    Officer P3("Max Payne", "2244", Illeg2, m3);
+    P3.Inspect();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
