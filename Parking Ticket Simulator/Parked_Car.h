@@ -16,18 +16,16 @@ private:
 
 public:
 	
-	friend class Ticket;
-
+	// Constructor
 	ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", double m_pk = 0);
-	//ParkedCar(string mk, string mdl, string clr, string ln, double m_pk);
 
-
+	// Setter (ended up not being necesary)
 	void SetCarInfo(string mk, string mdl, string clr, string ln, double m_pk);
 
-
+	// Getter (To check if values matched what was entered)
 	double Get_MinParked() const;
 
-
+	// Prints Car Info
 	void Print();
 
 };

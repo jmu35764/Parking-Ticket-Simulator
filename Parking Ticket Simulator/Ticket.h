@@ -6,26 +6,25 @@
 #include <cmath>
 #include "Parked_Car.h"
 #include "ParkingMeter.h"
-//#include "Officer.h"
 
 using namespace std;
-//class Officer;
 
-class Ticket
+
+class Ticket 
 {
 private:
 	double fine;
-	const double val = 1 / 60;
 	ParkedCar& pc;
 	ParkingMeter& pm;
-	//int time_diff;
 
 public:
 
+	// Constructor
 	Ticket(ParkingMeter& pmref, ParkedCar& pcref);
 
 	double SetFine(ParkingMeter pm, ParkedCar pc);
 
+	// Shows information for the ticket
 	void Print(ParkedCar pc, ParkingMeter pm, string offName, string offNum);
 
 };

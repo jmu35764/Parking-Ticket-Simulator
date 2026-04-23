@@ -8,7 +8,7 @@
 #include "Ticket.h"
 
 using namespace std;
-class Ticket;
+class Ticket;  //Forward Declaration
 
 class Officer
 {
@@ -20,13 +20,12 @@ private:
 
 public:
 
+	//Constructor
 	Officer(string OffN, string OffB, ParkedCar& pcref, ParkingMeter& pmref);
 
 
+	//Checks the Car and Meter time difference
 	void Inspect();
-
-
-	void Print();
 
 };
 
