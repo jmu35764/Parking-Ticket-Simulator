@@ -20,8 +20,7 @@ private:
 
 public:
 
-	Officer(string OffN, string OffB, ParkedCar& pcref, ParkingMeter& pmref) :parkedcar(pcref)
-		, parkingmeter(pmref), Off_Name(OffN), Off_Badge(OffB);
+	Officer(string OffN, string OffB, ParkedCar& pcref, ParkingMeter& pmref);
 
 
 	void Inspect();
@@ -30,6 +29,5 @@ public:
 	void Print();
 
 }
-
 
 #endif

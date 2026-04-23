@@ -22,8 +22,7 @@ private:
 
 public:
 
-	Ticket(ParkingMeter& pmref, ParkedCar& pcref) : pc(pcref), pm(pmref);
-
+	Ticket(ParkingMeter& pmref, ParkedCar& pcref);
 
 	double SetFine(ParkingMeter pm, ParkedCar pc);
 
@@ -31,6 +30,6 @@ public:
 	void Print(ParkedCar pc, ParkingMeter pm, string offName, string offNum);
 
 
-}
+};
 
 #endif
