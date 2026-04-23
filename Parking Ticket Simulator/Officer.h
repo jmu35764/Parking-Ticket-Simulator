@@ -17,6 +17,7 @@ private:
 	string Off_Badge;
 	ParkedCar& parkedcar;
 	ParkingMeter& parkingmeter;
+
 public:
 
 	Officer(string OffN, string OffB, ParkedCar& pcref, ParkingMeter& pmref) :parkedcar(pcref)
@@ -28,7 +29,7 @@ public:
 
 	void Print();
 
-};
+}
 
 
 #endif

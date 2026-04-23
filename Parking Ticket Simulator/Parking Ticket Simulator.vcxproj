@@ -131,6 +131,7 @@
     <ClCompile Include="Parked_Car.cpp" />
     <ClCompile Include="Parking Ticket Simulator.cpp" />
     <ClCompile Include="ParkingMeter.cpp" />
+    <ClCompile Include="Ticket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Officer.h" />
