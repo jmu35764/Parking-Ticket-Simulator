@@ -4,7 +4,7 @@
 using namespace std;
 
 
-ParkedCar :: ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", double m_pk = 0)
+ParkedCar :: ParkedCar(string mk, string mdl, string clr, string ln, double m_pk)
 {
 	SetCarInfo(mk, mdl, clr, ln, m_pk);
 }
@@ -18,7 +18,7 @@ void ParkedCar::SetCarInfo(string mk, string mdl, string clr, string ln, double 
 	minutes_parked = m_pk;
 }
 
-int ParkedCar::Get_MinParked() const
+double ParkedCar::Get_MinParked() const
 {
 	return minutes_parked;
 }

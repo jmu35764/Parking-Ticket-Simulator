@@ -3,7 +3,7 @@
 #include "ParkingMeter.h"
 using namespace std;
 
-ParkingMeter::ParkingMeter(double min_pch = 0)
+ParkingMeter::ParkingMeter(double min_pch)
 {
 	minutes_purchased = min_pch;
 }
@@ -13,7 +13,7 @@ void ParkingMeter::SetMeter(double min_pch)
 	minutes_purchased = min_pch;
 }
 
-int ParkingMeter::Get_MinPurch() const
+double ParkingMeter::Get_MinPurch() const
 {
 	return minutes_purchased;
 }

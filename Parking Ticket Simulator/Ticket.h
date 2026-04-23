@@ -6,7 +6,7 @@
 #include <cmath>
 #include "Parked_Car.h"
 #include "ParkingMeter.h"
-#include "Officer.h"
+//#include "Officer.h"
 
 using namespace std;
 //class Officer;
@@ -26,9 +26,7 @@ public:
 
 	double SetFine(ParkingMeter pm, ParkedCar pc);
 
-
 	void Print(ParkedCar pc, ParkingMeter pm, string offName, string offNum);
-
 
 };
 

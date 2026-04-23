@@ -19,12 +19,13 @@ public:
 	friend class Ticket;
 
 	ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", double m_pk = 0);
+	//ParkedCar(string mk, string mdl, string clr, string ln, double m_pk);
 
 
 	void SetCarInfo(string mk, string mdl, string clr, string ln, double m_pk);
 
 
-	int Get_MinParked() const;
+	double Get_MinParked() const;
 
 
 	void Print();

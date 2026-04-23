@@ -20,7 +20,7 @@ public:
 	void SetMeter(double min_pch);
 
 
-	int Get_MinPurch() const;
+	double Get_MinPurch() const;
 
 
 	void Print();

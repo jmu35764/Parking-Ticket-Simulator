@@ -28,6 +28,6 @@ public:
 
 	void Print();
 
-}
+};
 
 #endif
