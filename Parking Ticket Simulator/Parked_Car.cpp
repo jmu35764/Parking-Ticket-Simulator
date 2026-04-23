@@ -1,11 +1,7 @@
-#ifndef TICKET_H
-#define TICKET_H
-
 #include <string>
 #include <iostream>
-#include <cmath>
 #include "Parked_Car.h"
-#include "ParkingMeter.h"
+using namespace std;
 
 
 ParkedCar :: ParkedCar(string mk = " ", string mdl = " ", string clr = " ", string ln = " ", double m_pk = 0)
@@ -38,4 +34,3 @@ void ParkedCar::Print()
 
 
 
-#endif 

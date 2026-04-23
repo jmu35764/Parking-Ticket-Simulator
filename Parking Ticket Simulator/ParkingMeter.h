@@ -14,25 +14,17 @@ public:
 
 	friend class Ticket;
 	
-	ParkingMeter(double min_pch = 0)
-	{
-		minutes_purchased = min_pch;
-	}
+	ParkingMeter(double min_pch = 0);
 
-	void SetMeter(double min_pch)
-	{
-		minutes_purchased = min_pch;
-	}
 
-	int Get_MinPurch() const
-	{
-		return minutes_purchased;
-	}
+	void SetMeter(double min_pch);
 
-	void Print()
-	{
-		cout << "Minutes Purchased: " << minutes_purchased << endl;
-	}
+
+	int Get_MinPurch() const;
+
+
+	void Print();
+
 };
 
 #endif
