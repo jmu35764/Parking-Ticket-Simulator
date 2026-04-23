@@ -22,6 +22,8 @@ int main()
 
     ParkingMeter m1(60);
 
+    // Car 1 still has 10 minutes left, so there should be 
+    // no violation
     Officer P1("Jones", "1234", Car1, m1);
     P1.Inspect();
 
@@ -32,6 +34,9 @@ int main()
     ParkedCar Illeg("Mercury", "Sabel", "White", "456DEF", 70);
     ParkingMeter m2(60);
     
+    
+    // Illeg is over by 10 min, so there should be 
+    // a violation with a 25 dollar fine
     Officer P2("Max Payne", "2244", Illeg, m2);
     P2.Inspect();
 
@@ -43,6 +48,8 @@ int main()
     ParkedCar Illeg2("Honda", "Civic", "Red", "789GHI", 181);
     ParkingMeter m3(60);
 
+    // Illeg2 is over by 121 min, so there should be 
+    // a violation with a 45 dollar fine
     Officer P3("Max Payne", "2244", Illeg2, m3);
     P3.Inspect();
 
@@ -65,19 +72,19 @@ int main()
     Meter[2] = ParkingMeter(60);
     Meter[3] = ParkingMeter(60);
 
-    Officer Mult1("Adrian", "9876", Car_[0], Meter[0]);
+    Officer Mult1("Adrian", "9876", Car_[0], Meter[0]);    // Should be no violation
     Mult1.Inspect();
     cout << endl;
 
-    Officer Mult2("Adrian", "9876", Car_[1], Meter[1]);
+    Officer Mult2("Adrian", "9876", Car_[1], Meter[1]);     // Should be no violation
     Mult2.Inspect();
     cout << endl;
 
-    Officer Mult3("Adrian", "9876", Car_[2], Meter[2]);
+    Officer Mult3("Adrian", "9876", Car_[2], Meter[2]);     // Should be a 35$ violation
     Mult3.Inspect();
     cout << endl;
 
-    Officer Mult4("Adrian", "9876", Car_[3], Meter[3]);
+    Officer Mult4("Adrian", "9876", Car_[3], Meter[3]);     // Should be a 55$ violation
     Mult4.Inspect();
 
 }   
